@@ -10,6 +10,22 @@
     tools:context="com.example.proyectofinalsis22a.MainActivity"
     tools:showIn="@layout/activity_main"
     >
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif-monospace"
+        android:text="Himnario de alabanzas y coros"
+        android:textAlignment="center"
+        android:textColor="#611A04"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+                />
 
 
 </LinearLayout>
