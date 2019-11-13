@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     MantenimientoMySQL manto = new MantenimientoMySQL();
     Dto datos = new Dto();
 
+    //Banderas
+    boolean estadoGuarda = false;
+    boolean estadoEliminar = false;
 
 
 }
