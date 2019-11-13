@@ -33,8 +33,23 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
-                android:src="@drawable/cantar"
+                android:src="@drawable/hi"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/et_codigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de  la Alabanza"
+                android:inputType="number"
+                android:background="@drawable/estiloedittext"
+                android:shadowRadius="5"
+                android:paddingLeft="25dp"
+                android:drawableStart="@drawable/ic_hola"
+                android:drawablePadding="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 />
 
