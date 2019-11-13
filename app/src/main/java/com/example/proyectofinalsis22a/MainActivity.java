@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_codigo, et_descripcion, et_autor, et_tipo;
     private Button btn_guardar, btn_consultaCodigo, btn_consultaDescripcion, btn_eliminar, btn_actualizar;
 
+    boolean inputEt=false;
+    boolean inputEd=false;
+    boolean input1=false;
+    int resultadoInsert=0;
 
 
 }
