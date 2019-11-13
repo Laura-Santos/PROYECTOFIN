@@ -41,6 +41,21 @@
                 android:id="@+id/et_codigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Ingrese el codigo"
+                android:inputType="number"
+                android:background="@drawable/estiloedittext"
+                android:shadowRadius="5"
+                android:paddingLeft="25dp"
+                android:drawableStart="@drawable/ic_hola"
+                android:drawablePadding="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/et_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Ingrese el nombre de la Alabanza"
                 android:inputType="number"
                 android:background="@drawable/estiloedittext"
@@ -65,5 +80,19 @@
                 android:drawableStart="@drawable/ic_descripcion"
                 android:drawablePadding="5dp"
                 />
+            <EditText
+                android:id="@+id/et_autor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/estiloedittext"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif-black"
+                android:hint="Ingrese el Autor de la Alabanza o Coro"
+                android:inputType="textPersonName"
+                android:paddingLeft="25dp" />
 
 </LinearLayout>
