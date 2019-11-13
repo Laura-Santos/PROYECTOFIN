@@ -28,5 +28,21 @@
         android:layout_height="125dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:src="@drawable/inicio2"/>
+        android:src="@drawable/inicio2" />
+
+    <Button
+        android:id="@+id/btn_consultaNumero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="15dp"
+        android:drawablePadding="-40dp"
+        android:paddingLeft="50dp"
+        android:shadowColor="#8C82DD"
+        android:shadowDx="-3"
+        android:shadowDy="0"
+        android:shadowRadius="8"
+        android:text="Consultar po"
+        android:textColor="#0E0D0D" />
 </LinearLayout>
