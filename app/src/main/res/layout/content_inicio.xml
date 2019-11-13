@@ -11,5 +11,17 @@
     tools:showIn="@layout/activity_inicio">
 
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Himnario"
+        android:textAlignment="center"
+        android:textColor="#038876"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
 
 </LinearLayout>
