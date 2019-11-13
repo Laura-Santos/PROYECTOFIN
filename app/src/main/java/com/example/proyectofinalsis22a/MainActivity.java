@@ -37,4 +37,7 @@ public class MainActivity extends AppCompatActivity {
     String autor = "";
     String tipo = "";
 
+    MantenimientoMySQL manto = new MantenimientoMySQL();
+    Dto datos = new Dto();
+
 }
