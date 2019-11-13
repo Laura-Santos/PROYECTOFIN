@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     String senal = "";
     String codigo = "";
     String descripcion = "";
-
+    String autor = "";
+    String tipo = "";
 
 }
