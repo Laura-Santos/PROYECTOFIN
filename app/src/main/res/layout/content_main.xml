@@ -113,5 +113,23 @@
                 android:paddingRight="100dp"
                 android:drawablePadding="-140dp"
                 />
+            <Button
+                android:id="@+id/btn_consultaCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Consultar por código"
+                android:textColor="#0E0D0D"
+                android:background="@drawable/estiloboton"
+                android:shadowColor="#2314A8"
+                android:shadowDx="-3"
+                android:shadowDy="0"
+                android:shadowRadius="8"
+                android:drawableStart="@drawable/ic_search"
+                android:paddingLeft="80dp"
+                android:drawablePadding="-40dp"
+                />
 
 </LinearLayout>
