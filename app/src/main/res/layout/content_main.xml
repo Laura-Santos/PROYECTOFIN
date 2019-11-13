@@ -41,7 +41,7 @@
                 android:id="@+id/et_codigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre de  la Alabanza"
+                android:hint="Ingrese el nombre de la Alabanza"
                 android:inputType="number"
                 android:background="@drawable/estiloedittext"
                 android:shadowRadius="5"
