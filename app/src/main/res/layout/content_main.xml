@@ -148,5 +148,24 @@
                 android:shadowDy="0"
                 android:shadowRadius="8"
                 />
+            <Button
+                android:id="@+id/btn_eliminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Borrar"
+                android:textColor="#070707"
+                android:background="@drawable/estiloboton"
+                android:shadowColor="#2314A8"
+                android:drawableRight="@drawable/ic_borrar"
+                android:paddingRight="100dp"
+                android:drawablePadding="-140dp"
+                android:shadowDx="-3"
+                android:shadowDy="0"
+                android:shadowRadius="8"
+                />
 
-</LinearLayout>
+
+        </LinearLayout>
