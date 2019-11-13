@@ -52,5 +52,18 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 />
+            <EditText
+                android:id="@+id/et_letra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese la letra de la Alabanza"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/estiloedittext"
+                android:paddingLeft="25dp"
+                android:drawableStart="@drawable/ic_descripcion"
+                android:drawablePadding="5dp"
+                />
 
 </LinearLayout>
