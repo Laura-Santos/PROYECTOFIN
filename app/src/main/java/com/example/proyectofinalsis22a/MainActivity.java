@@ -31,5 +31,9 @@ public class MainActivity extends AppCompatActivity {
     boolean input1=false;
     int resultadoInsert=0;
 
+    String senal = "";
+    String codigo = "";
+    String descripcion = "";
+
 
 }
