@@ -34,4 +34,5 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class MantenimientoMySQL {
 //
+Dto datos = new Dto();
 }
