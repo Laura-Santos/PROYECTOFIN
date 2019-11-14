@@ -47,7 +47,8 @@ public class Dto implements Serializable {
 
     }
 
-    public Dto(int codigo, String descripcion, String autor, String tipo) {
+  //constructor
+  public Dto(int codigo, String descripcion, String autor, String tipo) {
 
-}
+  }
 }
