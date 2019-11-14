@@ -295,3 +295,22 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        if (id == R.id.action_limpiar) {
+            et_codigo.setText(null);
+            et_descripcion.setText(null);
+            et_autor.setText(null);
+            return true;
+        }else if(id == R.id.action_listaArticulos){
+            Intent spinnerActivity = new Intent(MainActivity.this, Consulta_RecyclerView.class);
+            startActivity(spinnerActivity);
+            return true;
+        }else if(id == R.id.action_salir){
+            DialogConfirmacion();
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
