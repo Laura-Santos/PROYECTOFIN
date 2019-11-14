@@ -46,4 +46,5 @@ Dto datos = new Dto();
 
     ProductsAdapter adapter;
 
+    public void guardar(final Context context, final String codigo, final String descripcion, final String autor, final String tipo){
 }
