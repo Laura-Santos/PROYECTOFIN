@@ -33,6 +33,6 @@ import java.util.Map;
 import static android.content.Context.MODE_PRIVATE;
 
 public class MantenimientoMySQL {
-//
+//Objeto
 Dto datos = new Dto();
 }
