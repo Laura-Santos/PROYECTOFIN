@@ -155,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
                     String tipo = et_tipo.getText().toString();
                     manto.guardar(MainActivity.this, codigo, descripcion, autor, tipo);
 
+                    limpiarDatos();
+                    et_codigo.requestFocus();
 
                 }
             }
