@@ -44,6 +44,7 @@
         android:shadowDy="0"
         android:shadowRadius="8"
         android:text="Buscar por numero "
+        android:background="@drawable/estiloboton2"
         android:textColor="#0E0D0D" />
 
 </LinearLayout>
