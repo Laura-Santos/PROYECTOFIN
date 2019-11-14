@@ -43,4 +43,8 @@ public class Dto implements Serializable {
         this.tipo = tipo;
     }
 
+    public Dto() {
+
+    }
+
 }
