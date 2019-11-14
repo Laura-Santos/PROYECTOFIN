@@ -338,3 +338,31 @@ public class MainActivity extends AppCompatActivity {
         dialogo.show();
     }
 
+    //Creación de HILOS
+    void Hilo(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for(int i=1; i<=1; i++){
+                    demora();
+                }
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String cod = getSharedCodigo(MainActivity.this);
+                        String des = getSharedDescripcion(MainActivity.this);
+                        String aut = getSharedAutor(MainActivity.this);
+                        String tip = getSharedTipo(MainActivity.this);
+
+                        et_codigo.setText(cod);
+                        et_descripcion.setText(des);
+                        et_autor.setText(aut);
+                        et_tipo.setText(tip);
+
+                        //Toast.makeText(MainActivity.this, "Código: "+cod + "\nPrecio: "+pre + "\nDescripción: "+des, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }).start();
+    }
+
