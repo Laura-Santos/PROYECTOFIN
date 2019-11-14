@@ -313,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+//
     private void DialogConfirmacion(){
         //startActivity(new Intent(getApplicationContext(),MainActivity.class));
         String mensaje = "¿Realmente desea salir?";
