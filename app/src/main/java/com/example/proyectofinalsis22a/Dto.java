@@ -49,6 +49,9 @@ public class Dto implements Serializable {
 
   //constructor
   public Dto(int codigo, String descripcion, String autor, String tipo) {
-
+      this.codigo = codigo;
+      this.descripcion = descripcion;
+      this.autor = autor;
+      this.tipo = tipo;
   }
 }
