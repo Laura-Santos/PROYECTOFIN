@@ -148,7 +148,16 @@ public class MainActivity extends AppCompatActivity {
                     input1 = false;
                 }else {
                     input1=true;
+                }   if (inputEt && inputEd && input1){
+                    String codigo = et_codigo.getText().toString();
+                    String descripcion = et_descripcion.getText().toString();
+                    String autor = et_autor.getText().toString();
+                    String tipo = et_tipo.getText().toString();
+                    manto.guardar(MainActivity.this, codigo, descripcion, autor, tipo);
+
+
                 }
+            }
 
 
         });
