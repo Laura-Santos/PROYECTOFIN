@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     boolean estadoGuarda = false;
     boolean estadoEliminar = false;
 
+    //Alerta
     AlertDialog.Builder dialogo;
 
 
