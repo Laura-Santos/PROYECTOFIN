@@ -43,4 +43,7 @@ Dto datos = new Dto();
     AlertDialog.Builder dialogo1;
     AlertDialog.Builder dialogo;
     ProgressDialog progressDialog;
+
+    ProductsAdapter adapter;
+
 }
