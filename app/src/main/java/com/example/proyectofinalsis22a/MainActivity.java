@@ -134,6 +134,14 @@ public class MainActivity extends AppCompatActivity {
                 if(et_codigo.getText().toString().length()==0){
                     et_codigo.setError("Campo obligatorio");
                     inputEt = false;
+                }else {
+                    inputEt=true;
+                }
+                if(et_descripcion.getText().toString().length()==0){
+                    et_descripcion.setError("Campo obligatorio");
+                    inputEd = false;
+                }else {
+                    inputEd=true;
                 }
         });
 
