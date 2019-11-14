@@ -359,10 +359,23 @@ public class MainActivity extends AppCompatActivity {
                         et_autor.setText(aut);
                         et_tipo.setText(tip);
 
-                        //Toast.makeText(MainActivity.this, "Código: "+cod + "\nPrecio: "+pre + "\nDescripción: "+des, Toast.LENGTH_SHORT).show();
                     }
                 });
             }
         }).start();
+    }
+
+
+    private void demora(){
+        try{
+            Thread.sleep(1000);
+        }catch (InterruptedException e){}
+    }
+
+
+    public String getSharedCodigo(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences("profeGamez", MODE_PRIVATE);
+        String codigo = preferences.getString("codigo","0");
+        return codigo;   //return preferences.getString("tiempo", "Sin configurar.");
     }
 
