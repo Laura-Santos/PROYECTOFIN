@@ -43,7 +43,7 @@
         android:shadowDx="-3"
         android:shadowDy="0"
         android:shadowRadius="8"
-        android:text="Consultar por numero de la alabanza"
+        android:text="Buscar por numero "
         android:textColor="#0E0D0D" />
 
 </LinearLayout>
