@@ -127,6 +127,16 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        btn_guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(et_codigo.getText().toString().length()==0){
+                    et_codigo.setError("Campo obligatorio");
+                    inputEt = false;
+                }
+        });
+
     }
 
 
