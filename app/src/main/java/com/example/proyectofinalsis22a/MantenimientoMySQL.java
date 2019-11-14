@@ -63,4 +63,11 @@ Dto datos = new Dto();
                                 //Toast.makeText(context, "Registro almacenado en MySQL.", Toast.LENGTH_SHORT).show();
                             }else if(estado.equals("2")){
                                 Toast.makeText(context, ""+mensaje, Toast.LENGTH_SHORT).show();
-    }
+                                   }
+
+                        }catch (JSONException e){
+                            e.printStackTrace();
+                            //Toast.makeText(context, "Se encontrarón problemas...", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
