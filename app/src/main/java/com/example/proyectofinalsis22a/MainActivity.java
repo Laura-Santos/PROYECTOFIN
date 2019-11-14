@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -75,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back));
-        toolbar.setTitleTextColor(getResources().getColor(R.color.mycolor1));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.color1));
         toolbar.setTitleMargin(0, 0, 0, 0);
         toolbar.setSubtitle("Proyecto Final SIS22A");
-        toolbar.setSubtitleTextColor(getResources().getColor(R.color.mycolore));
+        toolbar.setSubtitleTextColor(getResources().getColor(R.color.color2));
         toolbar.setTitle("Alabanzas y Coros");
         setSupportActionBar(toolbar);
 
@@ -89,12 +90,12 @@ public class MainActivity extends AppCompatActivity {
         et_codigo = (EditText) findViewById(R.id.et_codigo);
         et_descripcion = (EditText) findViewById(R.id.et_descripcion);
         et_autor = (EditText) findViewById(R.id.et_autor);
-        et_tipo = (EditText)findViewById(R.id.et_tipo);
+        et_tipo = (EditText) findViewById(R.id.et_tipo);
         btn_guardar = (Button) findViewById(R.id.btn_guardar);
         btn_consultaCodigo = (Button) findViewById(R.id.btn_consultaCodigo);
         btn_consultaDescripcion = (Button) findViewById(R.id.btn_consultaDescripcion);
         btn_eliminar = (Button) findViewById(R.id.btn_eliminar);
-        btn_actualizar = (Button) findViewById(R.id.btn_actualizar);
+        btn_actualizar = (Button) findViewById(R.id.btn_eliminar);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,6 +165,16 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+
+        btn_eliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(et_codigo.getText().toString().length()==0){
+                    et_codigo.setError("campo obligatorio");
+                    inputEt = false;
+                }else {
+                    inputEt=true;
+                }
     }
 
 
