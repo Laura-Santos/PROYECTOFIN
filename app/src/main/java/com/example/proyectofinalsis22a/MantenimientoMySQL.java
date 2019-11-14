@@ -79,7 +79,6 @@ Dto datos = new Dto();
             }
         }){
         protected Map<String, String> getParams() throws AuthFailureError {
-            //En este método se colocan o se setean los valores a recibir por el fichero *.php
             Map<String, String> map = new HashMap<>();
             map.put("Content-Type", "application/json; charset=utf-8");
             map.put("Accept", "application/json");
