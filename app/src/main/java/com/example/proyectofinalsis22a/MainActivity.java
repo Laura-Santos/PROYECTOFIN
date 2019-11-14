@@ -191,7 +191,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Begin...
                 if(et_codigo.getText().toString().length()==0){
                     et_codigo.setError("campo obligatorio");
                     inputEt = false;
@@ -199,3 +198,68 @@ public class MainActivity extends AppCompatActivity {
                     inputEt=true;
                 }
 
+<<<<<<< HEAD
+=======
+                if(inputEt) {
+                    String codigo = et_codigo.getText().toString();
+                    manto.consultarCodigo(MainActivity.this, codigo);
+                    et_codigo.requestFocus();
+                }
+
+            }
+        });
+
+        btn_consultaDescripcion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(et_descripcion.getText().toString().length()==0){
+                    et_descripcion.setError("Campo obligatorio");
+                    inputEd = false;
+                }else {
+                    inputEd=true;
+                }
+                if(inputEd){
+                    String descripcion = et_descripcion.getText().toString();
+                    //datos.setDescripcion(descripcion);
+                    manto.consultarDescripcion(MainActivity.this, descripcion);
+                    et_descripcion.requestFocus();
+                    //Hilo();
+
+                }
+
+            }
+        });
+
+        btn_actualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(et_codigo.getText().toString().length()==0){
+                    et_codigo.setError("campo obligatorio");
+                    inputEt = false;
+                }else {
+                    inputEt=true;
+                }
+
+                if(inputEt) {
+
+                    String cod = et_codigo.getText().toString();
+                    String descripcion = et_descripcion.getText().toString();
+                    String autor = et_autor.getText().toString();
+                    String tipo = et_tipo.getText().toString();
+
+                    datos.setCodigo(Integer.parseInt(cod));
+                    datos.setDescripcion(descripcion);
+                    datos.setAutor(autor);
+                    datos.setTipo(tipo);
+                    manto.modificar(MainActivity.this, datos);
+                    limpiarDatos();
+                    et_codigo.requestFocus();
+                }
+
+            }
+        });
+
+
+>>>>>>> origin/master
