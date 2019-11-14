@@ -103,6 +103,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        try {
+            Intent intent = getIntent();
+            Bundle bundle = intent.getExtras();
+            if (bundle != null) {
+
+                senal = bundle.getString("senal");
+                codigo = bundle.getString("codigo");
+                descripcion = bundle.getString("descripcion");
+                autor = bundle.getString("autor");
+                tipo = bundle.getString("tipo");
+                if (senal.equals("1")) {
+                    et_codigo.setText(codigo);
+                    et_descripcion.setText(descripcion);
+                    et_autor.setText(autor);
+                    et_tipo.setText(tipo);
+                    //finish();
+                }else if(senal.equals("2")){
+
+                }
+            }
+        }catch (Exception e){
+
+        }
+
     }
 
 
