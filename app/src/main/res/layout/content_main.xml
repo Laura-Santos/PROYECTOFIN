@@ -96,6 +96,21 @@
                 android:inputType="textPersonName"
                 android:paddingLeft="25dp" />
 
+            <TextView
+                android:id="@+id/et_tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Himno, alabanza, coro"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/estiloedittext"
+                android:paddingLeft="25dp"
+                android:drawableStart="@drawable/ic_descripcion"
+                android:drawablePadding="5dp"/>
+
+
+
             <Button
                 android:id="@+id/btn_guardar"
                 android:layout_width="match_parent"
