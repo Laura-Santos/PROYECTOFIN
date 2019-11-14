@@ -39,4 +39,8 @@ Dto datos = new Dto();
     boolean estadoGuardar = false;
     boolean estadoEliminar = false;
 
+    private ProgressDialog pd;
+    AlertDialog.Builder dialogo1;
+    AlertDialog.Builder dialogo;
+    ProgressDialog progressDialog;
 }
