@@ -62,6 +62,7 @@
         android:shadowRadius="8"
         android:text="Consultar por Nombre"
         android:background="@drawable/estiloboton2"
+        android:drawableStart="@drawable/ic_persona"
         android:textColor="#090303" />
 
 </LinearLayout>
