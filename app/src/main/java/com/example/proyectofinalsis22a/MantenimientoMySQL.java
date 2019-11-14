@@ -52,5 +52,15 @@ Dto datos = new Dto();
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                }
+
+                        try{
+                            JSONObject requestJSON = new JSONObject(response.toString());
+                            String estado = requestJSON.getString("estado");
+                            String mensaje = requestJSON.getString("mensaje");
+
+                            if(estado.equals("1")){
+                                Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(context, "Registro almacenado en MySQL.", Toast.LENGTH_SHORT).show();
+                            }else if(estado.equals("2")){
+                                Toast.makeText(context, ""+mensaje, Toast.LENGTH_SHORT).show();
     }
