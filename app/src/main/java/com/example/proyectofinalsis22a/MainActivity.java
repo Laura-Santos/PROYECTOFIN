@@ -96,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
         btn_eliminar = (Button) findViewById(R.id.btn_eliminar);
         btn_actualizar = (Button) findViewById(R.id.btn_actualizar);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogConfirmacion();
+            }
+        });
+
     }
 
 
