@@ -143,6 +143,14 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     inputEd=true;
                 }
+                if(et_autor.getText().toString().length()==0){
+                    et_autor.setError("Campo obligatorio");
+                    input1 = false;
+                }else {
+                    input1=true;
+                }
+
+
         });
 
     }
