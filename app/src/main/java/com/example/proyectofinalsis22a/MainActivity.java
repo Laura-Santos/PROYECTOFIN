@@ -77,13 +77,25 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back));
         toolbar.setTitleTextColor(getResources().getColor(R.color.mycolor1));
         toolbar.setTitleMargin(0, 0, 0, 0);
-        toolbar.setSubtitle("Proyecto Final");
+        toolbar.setSubtitle("Proyecto Final SIS22A");
         toolbar.setSubtitleTextColor(getResources().getColor(R.color.mycolore));
-        toolbar.setTitle("Himnario");
+        toolbar.setTitle("Alabanzas y Coros");
         setSupportActionBar(toolbar);
 
         ///y esto para pantalla completa (oculta incluso la barra de estado)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        et_codigo = (EditText) findViewById(R.id.et_codigo);
+        et_descripcion = (EditText) findViewById(R.id.et_descripcion);
+        et_autor = (EditText) findViewById(R.id.et_autor);
+        et_tipo = (EditText)findViewById(R.id.et_tipo);
+        btn_guardar = (Button) findViewById(R.id.btn_guardar);
+        btn_consultaCodigo = (Button) findViewById(R.id.btn_consultaCodigo);
+        btn_consultaDescripcion = (Button) findViewById(R.id.btn_consultaDescripcion);
+        btn_eliminar = (Button) findViewById(R.id.btn_eliminar);
+        btn_actualizar = (Button) findViewById(R.id.btn_actualizar);
+
     }
 
 
