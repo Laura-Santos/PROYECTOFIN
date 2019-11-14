@@ -240,4 +240,23 @@ public class MainActivity extends AppCompatActivity {
                     inputEt=true;
                 }
 
+                if(inputEt) {
+
+                    String cod = et_codigo.getText().toString();
+                    String descripcion = et_descripcion.getText().toString();
+                    String autor = et_autor.getText().toString();
+                    String tipo = et_tipo.getText().toString();
+
+                    datos.setCodigo(Integer.parseInt(cod));
+                    datos.setDescripcion(descripcion);
+                    datos.setAutor(autor);
+                    datos.setTipo(tipo);
+                    manto.modificar(MainActivity.this, datos);
+                    limpiarDatos();
+                    et_codigo.requestFocus();
+                }
+
+            }
+        });
+
 
