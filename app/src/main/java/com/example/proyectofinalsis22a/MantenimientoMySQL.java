@@ -90,5 +90,13 @@ Dto datos = new Dto();
         }
     };
         MySingleton.getInstance(context).addToRequestQueue(request);
-
     }
+
+    public boolean guardar1(final Context context, final String codigo, final String descripcion, final String autor, final String tipo) {
+        // String url = "http://mjgl.com.sv/mysqlcrud/guardar.php";
+        String url  = Config.urlGuardar;
+        StringRequest request = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
