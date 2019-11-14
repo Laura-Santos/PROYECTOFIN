@@ -217,4 +217,15 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     inputEd=true;
                 }
+                if(inputEd){
+                    String descripcion = et_descripcion.getText().toString();
+                    //datos.setDescripcion(descripcion);
+                    manto.consultarDescripcion(MainActivity.this, descripcion);
+                    et_descripcion.requestFocus();
+                    //Hilo();
+
+                }
+
+            }
+        });
 
