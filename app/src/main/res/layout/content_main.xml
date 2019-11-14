@@ -32,12 +32,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:src="@drawable/hi"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                />
+                android:src="@drawable/solfeo" />
             <EditText
                 android:id="@+id/et_codigo"
                 android:layout_width="match_parent"
@@ -91,7 +90,6 @@
                 android:background="@drawable/estiloedittext"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="5dp"
-                android:fontFamily="sans-serif-black"
                 android:hint="Ingrese el Autor de la Alabanza o Coro"
                 android:inputType="textPersonName"
                 android:paddingLeft="25dp" />

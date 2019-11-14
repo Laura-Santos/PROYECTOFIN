@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                     et_descripcion.setError("Campo obligatorio");
                     inputEd = false;
                 }else {
-                    inputEd=true;
+                    inputEd=true;22
                 }
                 if(et_autor.getText().toString().length()==0){
                     et_autor.setError("Campo obligatorio");
