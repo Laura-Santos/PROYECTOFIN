@@ -21,6 +21,7 @@
         android:textColor="#611A04"
         android:textSize="30dp"
         android:textStyle="bold" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
