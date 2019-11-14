@@ -60,6 +60,7 @@
         android:shadowDy="0"
         android:shadowRadius="8"
         android:text="Consultar por Nombre"
+        android:background="@drawable/estiloboton2"
         android:textColor="#090303" />
 
 </LinearLayout>
