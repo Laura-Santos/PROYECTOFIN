@@ -45,6 +45,7 @@
         android:shadowRadius="8"
         android:text="Buscar por numero "
         android:background="@drawable/estiloboton2"
+        android:drawableStart="@drawable/ic_busqueda"
         android:textColor="#0E0D0D" />
 
     <Button
