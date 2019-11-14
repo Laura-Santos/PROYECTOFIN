@@ -199,11 +199,3 @@ public class MainActivity extends AppCompatActivity {
                     inputEt=true;
                 }
 
-                if(inputEt) {
-                    String codigo = et_codigo.getText().toString();
-                    manto.consultarCodigo(MainActivity.this, codigo);
-                    et_codigo.requestFocus();
-                }
-
-            }
-        });
