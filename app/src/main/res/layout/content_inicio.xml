@@ -59,6 +59,7 @@
         android:shadowDx="-3"
         android:shadowDy="0"
         android:shadowRadius="8"
+        android:text="Consultar por Nombre"
         android:textColor="#090303" />
 
 </LinearLayout>
