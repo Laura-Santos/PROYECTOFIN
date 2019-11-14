@@ -175,7 +175,14 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     inputEt=true;
                 }
-    }
 
+                if(inputEt){
+                    String codigo = et_codigo.getText().toString();
+                    manto.eliminar(MainActivity.this, codigo);
 
-    }
+                    limpiarDatos();
+                    et_codigo.requestFocus();
+
+                }
+            }
+        });
