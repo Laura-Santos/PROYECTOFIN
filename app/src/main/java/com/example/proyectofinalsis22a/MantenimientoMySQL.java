@@ -50,4 +50,7 @@ Dto datos = new Dto();
         String url = Config.urlGuardar;
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                }
     }
