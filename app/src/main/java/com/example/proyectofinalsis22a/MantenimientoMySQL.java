@@ -67,7 +67,15 @@ Dto datos = new Dto();
 
                         }catch (JSONException e){
                             e.printStackTrace();
-                            //Toast.makeText(context, "Se encontrarón problemas...", Toast.LENGTH_SHORT).show();
                         }
 
                     }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //En este método se notifica al usuario acerca de un posible error al tratar de
+                //realizar una acción cualquier en la base de datos remota.
+                Toast.makeText(context, "No se puedo guardar. \n" +
+                        "Verifique su acceso a internet.", Toast.LENGTH_SHORT).show();
+            }
+        })
