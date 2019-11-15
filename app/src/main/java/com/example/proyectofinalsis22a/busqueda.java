@@ -33,5 +33,9 @@ public class busqueda {
     AlertDialog.Builder dialogo1;
     AlertDialog.Builder dialogo;
     ProgressDialog progressDialog;
-    }
+
+    ProductsAdapter adapter;
+
+
+}
 
