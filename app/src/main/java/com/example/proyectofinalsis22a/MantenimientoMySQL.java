@@ -281,5 +281,10 @@ Dto datos = new Dto();
                       progressDialog.show();
 
                       String url  = Config.urlConsultaAllArticulos;
+                      StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                              new Response.Listener<String>() {
+                                  @Override
+                                  public void onResponse(String response) {
+
 
 
