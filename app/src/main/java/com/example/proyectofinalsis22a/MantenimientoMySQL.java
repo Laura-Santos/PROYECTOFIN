@@ -169,10 +169,16 @@ Dto datos = new Dto();
                               intent.putExtra("tipo", tipo);
                               context.startActivity(intent);
 
+                              progressDialog.dismiss();
+                          } catch (JSONException e) {
+                              e.printStackTrace();
+                          }
 
 
 
-  }
+
+
+                  }
 
 
 
