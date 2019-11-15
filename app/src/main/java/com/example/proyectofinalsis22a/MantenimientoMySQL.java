@@ -271,6 +271,15 @@ Dto datos = new Dto();
                       MySingleton.getInstance(context).addToRequestQueue(stringRequest);
                   }
 
+                  public ArrayList<String> consultarAllArticulos(final Context context){
 
+                      final ArrayList productosList = new ArrayList<>();  //ArrayList<String>
+
+                      progressDialog = new ProgressDialog(context);
+                      progressDialog.setCancelable(false);
+                      progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+                      progressDialog.show();
+
+                      String url  = Config.urlConsultaAllArticulos;
 
 
