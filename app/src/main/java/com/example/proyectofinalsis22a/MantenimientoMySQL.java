@@ -129,6 +129,8 @@ Dto datos = new Dto();
       progressDialog.show();
 
       String url  = Config.urlConsultaCodigo;
+      StringRequest stringRequest = new StringRequest(Request.Method.POST,
+              url,
 
 
 
