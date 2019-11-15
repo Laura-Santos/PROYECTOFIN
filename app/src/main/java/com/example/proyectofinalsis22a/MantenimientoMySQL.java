@@ -283,6 +283,43 @@ Dto datos = new Dto();
 
                                                 JSONObject articulosObject = array.getJSONObject(i);
 
+                                                int codigo = articulosObject.getInt("codigo");
+                                                String descripcion = articulosObject.getString("descripcion");
+                                                String autor = articulosObject.getString("autor");
+                                                String tipo = articulosObject.getString("tipo");
+                                                //String img = articulosObject.getString("imagen");
+                                                Productos objeto = new Productos(codigo, descripcion, autor, tipo);
+                                                productosList.add(objeto);
+
+                                /*
+                                productosList.add(new Productos(
+                                        articulosObject.getInt("codigo"),
+                                        articulosObject.getString("descripcion"),
+                                        articulosObject.getDouble("precio"),
+                                        articulosObject.getString("imagen")
+                                ));*/
+                                            }
+
+                                            //adapter = new ProductsAdapter(context, productosList);
+                                            //recyclerView.setAdapter(adapter);
+
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(context, "Error. Compruebe su acceso a Internet.", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                        //Volley.newRequestQueue(this).add(stringRequest);
+                        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+
+                        return productosList;
+                    }
+
 
 
 
