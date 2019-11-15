@@ -36,6 +36,18 @@ public class busqueda {
 
     ProductsAdapter adapter;
 
+    String url  = Config.urlbuscarhimnario;
+
+    StringRequest stringRequest = new StringRequest(Request.Method.POST,
+            url,
+            new Response.Listener<String>() {
+                @RequiresApi(api = Build.VERSION_CODES.M)
+                @SuppressLint("ResourceType")
+                @Override
+                public void onResponse(String response) {
+                    if(response.equals("0")) {
+                        Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
 
 }
 
