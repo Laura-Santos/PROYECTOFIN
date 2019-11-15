@@ -121,7 +121,11 @@ Dto datos = new Dto();
 
                 }
 
+  public void consultarCodigo(final Context context, final String codigo){
+      progressDialog = new ProgressDialog(context);
+      progressDialog.setCancelable(false);
+      progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+      progressDialog.show();
 
-                    public void consultarCodigo(final Context context, final String codigo){
 
-                    }
+  }
