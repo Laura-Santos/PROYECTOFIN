@@ -127,5 +127,15 @@ Dto datos = new Dto();
       progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
       progressDialog.show();
 
+      String url  = Config.urlConsultaCodigo;
 
+      StringRequest stringRequest = new StringRequest(Request.Method.POST,
+              url,
+              new Response.Listener<String>() {
+                  @RequiresApi(api = Build.VERSION_CODES.M)
+                  @SuppressLint("ResourceType")
+                  @Override
+                  public void onResponse(String response) {
+                      if(response.equals("0")) {
+                          Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
   }
