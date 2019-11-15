@@ -116,7 +116,6 @@ Dto datos = new Dto();
 
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        //Toast.makeText(context, "Se encontrarón problemas...", Toast.LENGTH_SHORT).show();
                         estadoGuardar = false;
                     }
 
