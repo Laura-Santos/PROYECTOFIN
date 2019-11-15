@@ -8,4 +8,8 @@ public class Productos {
     public int getCodigo() {
         return codigo;
     }
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
 }
