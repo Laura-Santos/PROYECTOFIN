@@ -336,6 +336,63 @@ Dto datos = new Dto();
                                     @SuppressLint("ResourceType")
                                     @Override
                                     public void onResponse(String response) {
+                                        try {
+                                            //Creamos un objeto JSONObject para poder acceder a los atributos (campos) del objeto. Esperando que todo
+                                            JSONObject respuestaJSON = new JSONObject(response.toString());                 //Creo un JSONObject a partir del StringBuilder pasado a cadena
+
+                                            //Accedemos al vector de resultados
+                                            String resultJSON = respuestaJSON.getString("estado");   // estado es el nombre del campo en el JSON
+                                            String result_msj = respuestaJSON.getString("mensaje");   // estado es el nombre del campo en el JSON
+
+                                            if (resultJSON.equals("1")) {
+
+                                                Toast toast = Toast.makeText(context, ""+result_msj, Toast.LENGTH_LONG);
+                                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                                toast.show();
+
+                                            } else if (resultJSON.equals("2")) {
+                                                Toast toast = Toast.makeText(context, ""+result_msj, Toast.LENGTH_LONG);
+                                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                                toast.show();
+                                            }
+
+                                            progressDialog.dismiss();
+
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+
+                                        progressDialog.dismiss();
+
+                                    }
+                                }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                progressDialog.dismiss();
+                                Toast.makeText(context, "Algo salio mal con la conexión al servidor. \nRevise su conexión a Internet.", Toast.LENGTH_LONG).show();
+                            }
+                        }) {
+                            protected Map<String, String> getParams() throws AuthFailureError {
+                                Map<String, String> map = new HashMap<String, String>();
+                                map.put("Content-Type", "application/json; charset=utf-8");
+                                map.put("Accept", "application/json");
+                                map.put("codigo", String.valueOf(datos.getCodigo()));
+                                map.put("descripcion", datos.getDescripcion());
+                                map.put("autor", datos.getAutor());
+                                map.put("tipo", datos.getTipo());
+                /*
+                map.put("codigo", codigo);
+                map.put("descripcion", descripcion);
+                map.put("precio", precio);
+                */
+                                return map;
+
+                            }
+                        };
+
+                        MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+
+                    }
 
 
 
