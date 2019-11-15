@@ -257,13 +257,31 @@ Dto datos = new Dto();
 
      MySingleton.getInstance(context).addToRequestQueue(stringRequest);
 
-
-
-
- }
-
-
   }
+                    public ArrayList<String> consultarAllArticulos(final Context context){
+
+                        final ArrayList productosList = new ArrayList<>();  //ArrayList<String>
+
+                        progressDialog = new ProgressDialog(context);
+                        progressDialog.setCancelable(false);
+                        progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+                        progressDialog.show();
+
+                        String url  = Config.urlConsultaAllArticulos;
+
+                        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                                new Response.Listener<String>() {
+                                    @Override
+                                    public void onResponse(String response) {
+
+                                        try {
+                                            JSONArray array = new JSONArray(response);
+                                            int totalEncontrados = array.length();
+                                            Toast.makeText(context, "Total: "+totalEncontrados, Toast.LENGTH_SHORT).show();
+
+                                            for (int i = 0; i < array.length(); i++) {
+
+                                                JSONObject articulosObject = array.getJSONObject(i);
 
 
 
