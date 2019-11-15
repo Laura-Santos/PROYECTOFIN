@@ -158,6 +158,7 @@ Dto datos = new Dto();
                               String autor = jsonArray.getJSONObject(0).getString("autor");
                               String tipo = jsonArray.getJSONObject(0).getString("tipo");
 
+<<<<<<< HEAD
 
                               datos.setCodigo(Integer.parseInt(codigo));
                               datos.setDescripcion(descripcion);
@@ -166,4 +167,41 @@ Dto datos = new Dto();
 
 
 
+=======
+                              Intent intent = new Intent(context, MainActivity.class);
+                              intent.putExtra("senal", "1");
+                              intent.putExtra("codigo", codigo.toString());
+                              intent.putExtra("descripcion", descripcion);
+                              intent.putExtra("autor", autor);
+                              intent.putExtra("tipo", tipo);
+                              context.startActivity(intent);
+
+                              progressDialog.dismiss();
+                          } catch (JSONException e) {
+                              e.printStackTrace();
+                          }
+                      }
+                              progressDialog.dismiss();
+                          }
+                      },
+                      new Response.ErrorListener() {
+                          @Override
+                          public void onErrorResponse(VolleyError error) {
+                              if(error != null){
+                                  Toast.makeText(context, "No se ha podido establecer conexión con el servidor. Verifique su acceso a Internet.", Toast.LENGTH_LONG).show();
+                                  progressDialog.dismiss();
+                              }
+                          }
+                      }){
+                          protected Map<String, String> getParams() throws AuthFailureError {
+                              Map<String, String> map = new HashMap<String, String>();
+                              map.put("codigo",codigo);
+                              return map;
+                          }
+                      };
+
+                      MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+
+                  }
+>>>>>>> 2a62f4cbe37dec5ebd0e55d741c4da3ef97382b8
 
