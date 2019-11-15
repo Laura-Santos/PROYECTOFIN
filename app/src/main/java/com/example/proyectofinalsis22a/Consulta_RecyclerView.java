@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Consulta_RecyclerView {
-    //private static final String URL = "http://mjgl.com.sv/mysqlcrud/Api.php";
     private static final String URL = Config.urlConsultaApiMySQLi;
 
     List<Productos> productosList;
@@ -88,7 +87,7 @@ public class Consulta_RecyclerView {
 
 
 
-        //Toast.makeText(this, "Si", Toast.LENGTH_SHORT).show();
+
 
         loadProductos();
 
@@ -99,7 +98,7 @@ public class Consulta_RecyclerView {
                     @Override
                     public void onResponse(String response) {
 
-                        //Toast.makeText(Consulta_RecyclerView.this, ""+response, Toast.LENGTH_SHORT).show();
+
 
                         try {
                             JSONArray array = new JSONArray(response);
@@ -110,15 +109,7 @@ public class Consulta_RecyclerView {
 
                                 JSONObject articulosObject = array.getJSONObject(i);
 
-                                //String img = articulosObject.getString("imagen");
-                                //Toast.makeText(Consulta_RecyclerView.this, ""+img, Toast.LENGTH_SHORT).show();
 
-                                /*int codigo = articulosObject.getInt("codigo");
-                                String descripcion = articulosObject.getString("descripcion");
-                                double precio = articulosObject.getDouble("precio");
-                                String img = articulosObject.getString("imagen");
-                                Productos objeto = new Productos(codigo, descripcion, precio, img);
-                                productosList.add(objeto);*/
 
                                 productosList.add(new Productos(
                                         articulosObject.getInt("codigo"),
@@ -142,12 +133,11 @@ public class Consulta_RecyclerView {
             }
         });
 
-        //Volley.newRequestQueue(this).add(stringRequest);
-        // MySingleton.getInstance(this).addToRequestQueue(stringRequest);
+
         MySingleton.getInstance(Consulta_RecyclerView.this).addToRequestQueue(stringRequest);
     }
     private void DialogConfirmacion(){
-        //startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
         String mensaje = "¿Realmente desea salir?";
         dialogo = new AlertDialog.Builder(Consulta_RecyclerView.this);
         dialogo.setIcon(R.drawable.ic_close);
@@ -156,9 +146,7 @@ public class Consulta_RecyclerView {
         dialogo.setCancelable(false);
         dialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialogo, int id) {
-                /*Intent intent = new Intent(DashboardLuces.this, luces_control_sms.class);
-                startActivity(intent);*/
-                //MainActivity.this.finishAffinity();
+
                 finish();
             }
         });
@@ -173,7 +161,6 @@ public class Consulta_RecyclerView {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_recycler_view, menu);
         return true;
     }
