@@ -131,56 +131,39 @@ Dto datos = new Dto();
       String url  = Config.urlConsultaCodigo;
       StringRequest stringRequest = new StringRequest(Request.Method.POST,
               url,
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
               new Response.Listener<String>() {
                   @RequiresApi(api = Build.VERSION_CODES.M)
                   @SuppressLint("ResourceType")
                   @Override
                   public void onResponse(String response) {
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
                       if(response.equals("0")) {
                           Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
                       }else{
                           try {
-
+=======
                       if(response.equals("0")) {
                           Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
                           progressDialog.dismiss();
                       }else{
                           try {
-                                /*
-                                Toast toast = Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
-                                */
-
                               JSONArray jsonArray = new JSONArray(response);
                               String codigo = jsonArray.getJSONObject(0).getString("codigo");
                               String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
                               String autor = jsonArray.getJSONObject(0).getString("autor");
                               String tipo = jsonArray.getJSONObject(0).getString("tipo");
 
-                              Intent intent = new Intent(context, MainActivity.class);
-                              intent.putExtra("senal", "1");
-                              intent.putExtra("codigo", codigo.toString());
-                              intent.putExtra("descripcion", descripcion);
-                              intent.putExtra("autor", autor);
-                              intent.putExtra("tipo", tipo);
-                              context.startActivity(intent);
+
+                              datos.setCodigo(Integer.parseInt(codigo));
+                              datos.setDescripcion(descripcion);
+                              datos.setAutor(autor);
+                              datos.setTipo(tipo);
 
 
 
 
-  }
-
-
-
-                          }
-
-
-
-
-
-  }
->>>>>>> origin/master
