@@ -116,6 +116,7 @@ Dto datos = new Dto();
 
                     } catch (JSONException e) {
                         e.printStackTrace();
+                        //Toast.makeText(context, "Se encontrarón problemas...", Toast.LENGTH_SHORT).show();
                         estadoGuardar = false;
                     }
 
@@ -128,9 +129,9 @@ Dto datos = new Dto();
       progressDialog.show();
 
       String url  = Config.urlConsultaCodigo;
-
       StringRequest stringRequest = new StringRequest(Request.Method.POST,
               url,
+<<<<<<< HEAD
               new Response.Listener<String>() {
                   @RequiresApi(api = Build.VERSION_CODES.M)
                   @SuppressLint("ResourceType")
@@ -148,3 +149,10 @@ Dto datos = new Dto();
 
 
                           }
+=======
+
+
+
+
+  }
+>>>>>>> origin/master
