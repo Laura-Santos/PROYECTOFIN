@@ -129,24 +129,19 @@ Dto datos = new Dto();
       progressDialog.show();
 
       String url  = Config.urlConsultaCodigo;
-      StringRequest stringRequest = new StringRequest(Request.Method.POST,
-              url,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
+      StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+
               new Response.Listener<String>() {
                   @RequiresApi(api = Build.VERSION_CODES.M)
                   @SuppressLint("ResourceType")
                   @Override
                   public void onResponse(String response) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                       if(response.equals("0")) {
                           Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
                       }else{
                           try {
-=======
+
                       if(response.equals("0")) {
                           Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
                           progressDialog.dismiss();
@@ -158,7 +153,7 @@ Dto datos = new Dto();
                               String autor = jsonArray.getJSONObject(0).getString("autor");
                               String tipo = jsonArray.getJSONObject(0).getString("tipo");
 
-<<<<<<< HEAD
+
 
                               datos.setCodigo(Integer.parseInt(codigo));
                               datos.setDescripcion(descripcion);
@@ -167,7 +162,7 @@ Dto datos = new Dto();
 
 
 
-=======
+
                               Intent intent = new Intent(context, MainActivity.class);
                               intent.putExtra("senal", "1");
                               intent.putExtra("codigo", codigo.toString());
@@ -203,5 +198,5 @@ Dto datos = new Dto();
                       MySingleton.getInstance(context).addToRequestQueue(stringRequest);
 
                   }
->>>>>>> 2a62f4cbe37dec5ebd0e55d741c4da3ef97382b8
+
 
