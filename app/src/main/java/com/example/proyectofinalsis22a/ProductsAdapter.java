@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,7 +33,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         Productos product = productList.get(position);
 
-        holder.imageView.setImageResource(R.drawable.imgnoencontrada);
+        holder.imageView.setImageResource(R.drawable.cantar);
         holder.textViewCodigo1.setText(String.valueOf(product.getCodigo()));
         holder.textViewDescripcion1.setText(product.getDescripcion());
         holder.textViewAutor1.setText(product.getAutor());

@@ -31,5 +31,6 @@ public class Config {
     public static final String urlConsultaDescripcion = "http://localhost/conexion/buscarArticulosDescripcion.php";  //Busquedas por descripción.
     public static final String urlConsultaAllArticulos = "http://localhost/conexion/buscarArticulos.php";            //Devuelve todos los registros de la tabla MySQL.
 
+    public static final String urlbuscarhimnario = "http://192.168.43.114/conexion/buscarhimnario.php";
 
 }
