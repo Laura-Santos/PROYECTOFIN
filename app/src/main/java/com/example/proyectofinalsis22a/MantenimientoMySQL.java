@@ -379,13 +379,7 @@ Dto datos = new Dto();
                                 map.put("codigo", String.valueOf(datos.getCodigo()));
                                 map.put("descripcion", datos.getDescripcion());
                                 map.put("autor", datos.getAutor());
-                                map.put("tipo", datos.getTipo());
-                /*
-                map.put("codigo", codigo);
-                map.put("descripcion", descripcion);
-                map.put("precio", precio);
-                */
-                                return map;
+                           return map;
 
                             }
                         };
@@ -419,28 +413,11 @@ Dto datos = new Dto();
                     }
 
 
-    /*
-    public String obtenerCodigo(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences("filetime", MODE_PRIVATE);
-        String codigo = preferences.getString("codigo","0");
-        return codigo;   //return preferences.getString("tiempo", "Sin configurar.");
-    }
-
-    public String obtenerDescripcion(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences("filetime", MODE_PRIVATE);
-        String descripcion = preferences.getString("descripcion","Sin descripción");
-        return descripcion;   //return preferences.getString("tiempo", "Sin configurar.");
-    }
-
-    public String obtenerPrecio(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences("filetime", MODE_PRIVATE);
-        String precio = preferences.getString("precio","0.0");
-        return precio;   //return preferences.getString("tiempo", "Sin configurar.");
-    }
-    */
 
 
                 }
+
+
 
 
 
