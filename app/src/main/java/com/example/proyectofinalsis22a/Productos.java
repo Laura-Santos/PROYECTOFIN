@@ -5,4 +5,7 @@ public class Productos {
     String descripcion;
     String autor;
     String tipo;
+    public int getCodigo() {
+        return codigo;
+    }
 }
