@@ -189,7 +189,11 @@ Dto datos = new Dto();
       }
 
  public void consultarDescripcion(final Context context, final String descripcion){
-//
+
+     progressDialog = new ProgressDialog(context);
+
   }
+
+
 
 
