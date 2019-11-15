@@ -153,6 +153,17 @@ Dto datos = new Dto();
                               String tipo = jsonArray.getJSONObject(0).getString("tipo");
 
 
+                              Intent intent = new Intent(context, MainActivity.class);
+                              intent.putExtra("senal", "1");
+                              intent.putExtra("codigo", codigo.toString());
+                              intent.putExtra("descripcion", descripcion);
+                              intent.putExtra("autor", autor);
+                              intent.putExtra("tipo", tipo);
+                              context.startActivity(intent);
+
+
+
+
   }
 
 
