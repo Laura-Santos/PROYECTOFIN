@@ -262,6 +262,12 @@ Dto datos = new Dto();
                                       }
                                   }
                               }) {
+                      protected Map<String, String> getParams() throws AuthFailureError {
+                          Map<String, String> map = new HashMap<String, String>();
+                          map.put("descripcion", descripcion);
+                          return map;
+                      }
+                  };
 
 
 
