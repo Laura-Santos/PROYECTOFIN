@@ -122,7 +122,7 @@ Dto datos = new Dto();
 
                 }
 
+  public void consultarCodigo(final Context context, final String codigo){
+      progressDialog = new ProgressDialog(context);
 
-                    public void consultarCodigo(final Context context, final String codigo){
-
-                    }
+  }
