@@ -285,6 +285,16 @@ Dto datos = new Dto();
                               new Response.Listener<String>() {
                                   @Override
                                   public void onResponse(String response) {
+                                  }
+                                     try {
+                                      JSONArray array = new JSONArray(response);
+                                      int totalEncontrados = array.length();
+                                      Toast.makeText(context, "Total: "+totalEncontrados, Toast.LENGTH_SHORT).show();
+
+                                      for (int i = 0; i < array.length(); i++) {
+
+                                          JSONObject articulosObject = array.getJSONObject(i);
+
 
 
 
