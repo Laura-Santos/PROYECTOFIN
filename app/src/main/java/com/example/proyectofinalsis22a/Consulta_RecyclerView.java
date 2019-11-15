@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,7 +27,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Consulta_RecyclerView {
+
+public class Consulta_RecyclerView extends AppCompatActivity {
+
+    //private static final String URL = "http://mjgl.com.sv/mysqlcrud/Api.php";
     private static final String URL = Config.urlConsultaApiMySQLi;
 
     List<Productos> productosList;
@@ -35,6 +39,7 @@ public class Consulta_RecyclerView {
     ProductsAdapter adapter;
 
     AlertDialog.Builder dialogo;
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -55,6 +60,8 @@ public class Consulta_RecyclerView {
         //para las demas cosas, se reenvia el evento al listener habitual
         return super.onKeyDown(keyCode, event);
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,18 +94,20 @@ public class Consulta_RecyclerView {
 
 
 
-
+        //Toast.makeText(this, "Si", Toast.LENGTH_SHORT).show();
 
         loadProductos();
 
     }
+
+
     private void loadProductos() {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
-
+                        //Toast.makeText(Consulta_RecyclerView.this, ""+response, Toast.LENGTH_SHORT).show();
 
                         try {
                             JSONArray array = new JSONArray(response);
@@ -109,7 +118,15 @@ public class Consulta_RecyclerView {
 
                                 JSONObject articulosObject = array.getJSONObject(i);
 
+                                //String img = articulosObject.getString("imagen");
+                                //Toast.makeText(Consulta_RecyclerView.this, ""+img, Toast.LENGTH_SHORT).show();
 
+                                /*int codigo = articulosObject.getInt("codigo");
+                                String descripcion = articulosObject.getString("descripcion");
+                                double precio = articulosObject.getDouble("precio");
+                                String img = articulosObject.getString("imagen");
+                                Productos objeto = new Productos(codigo, descripcion, precio, img);
+                                productosList.add(objeto);*/
 
                                 productosList.add(new Productos(
                                         articulosObject.getInt("codigo"),
@@ -133,11 +150,14 @@ public class Consulta_RecyclerView {
             }
         });
 
-
+        //Volley.newRequestQueue(this).add(stringRequest);
+       // MySingleton.getInstance(this).addToRequestQueue(stringRequest);
         MySingleton.getInstance(Consulta_RecyclerView.this).addToRequestQueue(stringRequest);
     }
-    private void DialogConfirmacion(){
 
+
+    private void DialogConfirmacion(){
+        //startActivity(new Intent(getApplicationContext(),MainActivity.class));
         String mensaje = "¿Realmente desea salir?";
         dialogo = new AlertDialog.Builder(Consulta_RecyclerView.this);
         dialogo.setIcon(R.drawable.ic_close);
@@ -161,6 +181,7 @@ public class Consulta_RecyclerView {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_recycler_view, menu);
         return true;
     }
@@ -168,7 +189,7 @@ public class Consulta_RecyclerView {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.action_salir){
+       if(id == R.id.action_salir){
             DialogConfirmacion();
             return true;
         }
@@ -177,7 +198,5 @@ public class Consulta_RecyclerView {
 
 
 
-
-}
 
 }
