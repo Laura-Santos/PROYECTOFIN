@@ -393,6 +393,15 @@ Dto datos = new Dto();
                         MySingleton.getInstance(context).addToRequestQueue(stringRequest);
 
                     }
+                    public String informacion(Dto datos){
+                        String info;
+                        info = "Codigo = "+datos.getCodigo() + "\n" ;
+                        info += "Descripción = "+datos.getDescripcion() + "\n";
+                        info += "Autor = "+datos.getAutor() + "\n";
+                        info += "Tipo = "+datos.getTipo() + "\n";
+                        return info;
+                    }
+
 
 
 
