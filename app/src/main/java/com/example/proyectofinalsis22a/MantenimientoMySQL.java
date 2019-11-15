@@ -122,6 +122,179 @@ Dto datos = new Dto();
 
                 }
 
+  public void consultarCodigo(final Context context, final String codigo){
+      progressDialog = new ProgressDialog(context);
+      progressDialog.setCancelable(false);
+      progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+      progressDialog.show();
+
+      String url  = Config.urlConsultaCodigo;
+      StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+
+              new Response.Listener<String>() {
+                  @RequiresApi(api = Build.VERSION_CODES.M)
+                  @SuppressLint("ResourceType")
+                  @Override
+                  public void onResponse(String response) {
+
+                      if(response.equals("0")) {
+                          Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
+                      }else{
+                          try {
+
+                      if(response.equals("0")) {
+                          Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
+                          progressDialog.dismiss();
+                      }else{
+                          try {
+                              JSONArray jsonArray = new JSONArray(response);
+                              String codigo = jsonArray.getJSONObject(0).getString("codigo");
+                              String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
+                              String autor = jsonArray.getJSONObject(0).getString("autor");
+                              String tipo = jsonArray.getJSONObject(0).getString("tipo");
+
+
+
+                              datos.setCodigo(Integer.parseInt(codigo));
+                              datos.setDescripcion(descripcion);
+                              datos.setAutor(autor);
+                              datos.setTipo(tipo);
+
+
+
+
+                              Intent intent = new Intent(context, MainActivity.class);
+                              intent.putExtra("senal", "1");
+                              intent.putExtra("codigo", codigo.toString());
+                              intent.putExtra("descripcion", descripcion);
+                              intent.putExtra("autor", autor);
+                              intent.putExtra("tipo", tipo);
+                              context.startActivity(intent);
+
+                              progressDialog.dismiss();
+                          } catch (JSONException e) {
+                              e.printStackTrace();
+                          }
+                      }
+                              progressDialog.dismiss();
+                          }
+                      },
+                      new Response.ErrorListener() {
+                          @Override
+                          public void onErrorResponse(VolleyError error) {
+                              if(error != null){
+                                  Toast.makeText(context, "No se ha podido establecer conexión con el servidor. Verifique su acceso a Internet.", Toast.LENGTH_LONG).show();
+                                  progressDialog.dismiss();
+                              }
+                          }
+                      }){
+                          protected Map<String, String> getParams() throws AuthFailureError {
+                              Map<String, String> map = new HashMap<String, String>();
+                              map.put("codigo",codigo);
+                              return map;
+                          }
+                      };
+
+                      MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+
+                  }
+                  public void consultarDescripcion(final Context context, final String descripcion){
+
+                      progressDialog = new ProgressDialog(context);
+                      progressDialog.setCancelable(false);
+                      progressDialog.setMessage("Estamos trabajando en su petición");
+                      // progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+                      progressDialog.show();
+
+                      String url  = Config.urlbuscarhimnario;
+
+                      StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                              StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                              url,
+                              new Response.Listener<String>() {
+                                  @RequiresApi(api = Build.VERSION_CODES.M)
+                                  @SuppressLint("ResourceType")
+                                  @Override
+                                  public void onResponse(String response) {
+                                      if(response.equals("0")) {
+                                          Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
+                                          progressDialog.dismiss();
+
+                                      }else{
+                                          try {
+
+                                              JSONArray jsonArray = new JSONArray(response);
+                                              String codigo = jsonArray.getJSONObject(0).getString("codigo");
+                                              String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
+                                              String autor = jsonArray.getJSONObject(0).getString("autor");
+                                              String tipo = jsonArray.getJSONObject(0).getString("tipo");
+
+                                              datos.setCodigo(Integer.parseInt(codigo));
+                                              datos.setDescripcion(descripcion);
+                                              datos.setAutor(autor);
+                                              datos.setTipo(tipo);
+
+                                              Intent intent = new Intent(context, MainActivity.class);
+                                              intent.putExtra("senal", "1");
+                                              intent.putExtra("codigo", codigo.toString());
+                                              intent.putExtra("descripcion", descripcion);
+                                              intent.putExtra("autor", autor);
+                                              intent.putExtra("tipo", tipo);
+
+                                              context.startActivity(intent);
+
+                                              progressDialog.dismiss();
+
+                                          } catch (JSONException e) {
+                                              e.printStackTrace();
+                                          }
+                                      }
+                                      progressDialog.dismiss();
+                                  }
+
+                              },
+                              new Response.ErrorListener() {
+                                  @Override
+                                  public void onErrorResponse(VolleyError error) {
+                                      if(error != null){
+                                          Toast.makeText(context, "No se ha podido establecer conexión con el servidor. Verifique su acceso a Internet.", Toast.LENGTH_LONG).show();
+                                          progressDialog.dismiss();
+                                      }
+                                  }
+                              }) {
+                      protected Map<String, String> getParams() throws AuthFailureError {
+                          Map<String, String> map = new HashMap<String, String>();
+                          map.put("descripcion", descripcion);
+                          return map;
+                      }
+                  };
+                      MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+                  }
+
+                  public ArrayList<String> consultarAllArticulos(final Context context){
+
+                      final ArrayList productosList = new ArrayList<>();  //ArrayList<String>
+
+                      progressDialog = new ProgressDialog(context);
+                      progressDialog.setCancelable(false);
+                      progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+                      progressDialog.show();
+
+                      String url  = Config.urlConsultaAllArticulos;
+                      StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                              new Response.Listener<String>() {
+                                  @Override
+                                  public void onResponse(String response) {
+                                  }
+                                     try {
+                                      JSONArray array = new JSONArray(response);
+                                      int totalEncontrados = array.length();
+                                      Toast.makeText(context, "Total: "+totalEncontrados, Toast.LENGTH_SHORT).show();
+
+                                      for (int i = 0; i < array.length(); i++) {
+
+                                          JSONObject articulosObject = array.getJSONObject(i);
+
    public void consultarCodigo(final Context context, final String codigo){
     progressDialog = new ProgressDialog(context);
     progressDialog.setCancelable(false);
@@ -417,6 +590,7 @@ Dto datos = new Dto();
 
                 }
     }
+
 
 
 
