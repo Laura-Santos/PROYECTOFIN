@@ -198,5 +198,15 @@ Dto datos = new Dto();
                       MySingleton.getInstance(context).addToRequestQueue(stringRequest);
 
                   }
+                  public void consultarDescripcion(final Context context, final String descripcion){
+
+                      progressDialog = new ProgressDialog(context);
+                      progressDialog.setCancelable(false);
+                      progressDialog.setMessage("Estamos trabajando en su petición");
+                      // progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+                      progressDialog.show();
+
+                      String url  = Config.urlbuscarhimnario;
+
 
 
