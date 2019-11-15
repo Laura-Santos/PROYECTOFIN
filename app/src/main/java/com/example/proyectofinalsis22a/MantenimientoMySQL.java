@@ -319,6 +319,23 @@ Dto datos = new Dto();
 
                         return productosList;
                     }
+                    public void modificar(final Context context, final Dto datos){
+
+                        progressDialog = new ProgressDialog(context);
+
+                        progressDialog.setCancelable(false);
+                        progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+                        progressDialog.show();
+
+                        String url = Config.urlActualizar;
+
+                        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                                url,
+                                new Response.Listener<String>() {
+                                    @RequiresApi(api = Build.VERSION_CODES.M)
+                                    @SuppressLint("ResourceType")
+                                    @Override
+                                    public void onResponse(String response) {
 
 
 
