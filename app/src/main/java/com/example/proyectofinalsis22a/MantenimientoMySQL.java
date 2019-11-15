@@ -132,11 +132,15 @@ Dto datos = new Dto();
       StringRequest stringRequest = new StringRequest(Request.Method.POST,
               url,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
               new Response.Listener<String>() {
                   @RequiresApi(api = Build.VERSION_CODES.M)
                   @SuppressLint("ResourceType")
                   @Override
                   public void onResponse(String response) {
+<<<<<<< HEAD
                       if(response.equals("0")) {
                           Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
                       }else{
@@ -146,6 +150,8 @@ Dto datos = new Dto();
                               String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
                               String autor = jsonArray.getJSONObject(0).getString("autor");
                               String tipo = jsonArray.getJSONObject(0).getString("tipo");
+=======
+>>>>>>> origin/master
 
 
                           }
