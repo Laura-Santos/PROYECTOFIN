@@ -194,6 +194,13 @@ Dto datos = new Dto();
      progressDialog.setCancelable(false);
      progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
      progressDialog.show();
+     String url  = Config.urlbuscarhimnario;
+
+     StringRequest stringRequest = new StringRequest(Request.Method.POST,
+             url,
+             new Response.Listener<String>() {
+                 @RequiresApi(api = Build.VERSION_CODES.M)
+                 @SuppressLint("ResourceType")
 
 
   }
