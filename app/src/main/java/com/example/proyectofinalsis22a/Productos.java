@@ -35,5 +35,17 @@ public class Productos {
         this.tipo = tipo;
     }
 
+    public Productos() {
+    }
+
+    public Productos(int codigo, String descripcion, String autor, String tipo) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.autor = autor;
+        this.tipo = tipo;
+    }
 
 }
+
+
+
