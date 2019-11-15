@@ -122,3 +122,6 @@ Dto datos = new Dto();
                 }
 
 
+                    public void consultarCodigo(final Context context, final String codigo){
+
+                    }
