@@ -15,6 +15,11 @@ import com.android.volley.toolbox.Volley;
 //import android.support.v4.util.LruCache;
 
 public class MySingleton {
+    private static MySingleton mInstance;
+    private RequestQueue mRequestQueue;
+    private ImageLoader mImageLoader;
+    private static Context mCtx;
+
 
 }
 
