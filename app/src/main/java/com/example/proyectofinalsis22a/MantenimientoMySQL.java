@@ -128,5 +128,9 @@ Dto datos = new Dto();
       progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
       progressDialog.show();
 
+      String url  = Config.urlConsultaCodigo;
+
+
+
 
   }
