@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                     et_descripcion.setError("Campo obligatorio");
                     inputEd = false;
                 }else {
-                    inputEd=true;22
+                    inputEd=true;
                 }
                 if(et_autor.getText().toString().length()==0){
                     et_autor.setError("Campo obligatorio");
@@ -198,8 +198,7 @@ public class MainActivity extends AppCompatActivity {
                     inputEt=true;
                 }
 
-<<<<<<< HEAD
-=======
+
                 if(inputEt) {
                     String codigo = et_codigo.getText().toString();
                     manto.consultarCodigo(MainActivity.this, codigo);
@@ -397,7 +396,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//-----......
+
 }
 
 
