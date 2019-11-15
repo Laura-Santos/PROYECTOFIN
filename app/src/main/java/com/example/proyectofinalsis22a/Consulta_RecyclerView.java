@@ -3,6 +3,8 @@ package com.example.proyectofinalsis22a;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -144,5 +146,51 @@ public class Consulta_RecyclerView {
         // MySingleton.getInstance(this).addToRequestQueue(stringRequest);
         MySingleton.getInstance(Consulta_RecyclerView.this).addToRequestQueue(stringRequest);
     }
+    private void DialogConfirmacion(){
+        //startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        String mensaje = "¿Realmente desea salir?";
+        dialogo = new AlertDialog.Builder(Consulta_RecyclerView.this);
+        dialogo.setIcon(R.drawable.ic_close);
+        dialogo.setTitle("Advertencia");
+        dialogo.setMessage(mensaje);
+        dialogo.setCancelable(false);
+        dialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo, int id) {
+                /*Intent intent = new Intent(DashboardLuces.this, luces_control_sms.class);
+                startActivity(intent);*/
+                //MainActivity.this.finishAffinity();
+                finish();
+            }
+        });
+        dialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo, int id) {
+                Toast.makeText(getApplicationContext(), "Operación Cancelada.", Toast.LENGTH_LONG).show();
+            }
+        });
+        dialogo.show();
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_recycler_view, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.action_salir){
+            DialogConfirmacion();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+}
 
 }
