@@ -131,6 +131,11 @@ Dto datos = new Dto();
       String url  = Config.urlConsultaCodigo;
       StringRequest stringRequest = new StringRequest(Request.Method.POST,
               url,
+              new Response.Listener<String>() {
+                  @RequiresApi(api = Build.VERSION_CODES.M)
+                  @SuppressLint("ResourceType")
+                  @Override
+                  public void onResponse(String response) {
 
 
 
