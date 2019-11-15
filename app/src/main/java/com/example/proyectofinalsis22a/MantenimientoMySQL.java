@@ -141,17 +141,36 @@ Dto datos = new Dto();
                   @Override
                   public void onResponse(String response) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                       if(response.equals("0")) {
                           Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
                       }else{
                           try {
+=======
+                      if(response.equals("0")) {
+                          Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
+                          progressDialog.dismiss();
+                      }else{
+                          try {
+                                /*
+                                Toast toast = Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+                                */
+>>>>>>> b7c84586cc4ff58046f92dbee68dd21741286a59
                               JSONArray jsonArray = new JSONArray(response);
                               String codigo = jsonArray.getJSONObject(0).getString("codigo");
                               String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
                               String autor = jsonArray.getJSONObject(0).getString("autor");
                               String tipo = jsonArray.getJSONObject(0).getString("tipo");
+<<<<<<< HEAD
 =======
 >>>>>>> origin/master
+=======
+
+
+  }
+>>>>>>> b7c84586cc4ff58046f92dbee68dd21741286a59
 
 
                           }
