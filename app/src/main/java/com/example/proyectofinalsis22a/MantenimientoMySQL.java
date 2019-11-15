@@ -173,20 +173,18 @@ Dto datos = new Dto();
                           } catch (JSONException e) {
                               e.printStackTrace();
                           }
-
-
-
-
-
+                      }
+                              progressDialog.dismiss();
+                          }
+                      },
+                      new Response.ErrorListener() {
+                          @Override
+                          public void onErrorResponse(VolleyError error) {
+                              if(error != null){
+                                  Toast.makeText(context, "No se ha podido establecer conexión con el servidor. Verifique su acceso a Internet.", Toast.LENGTH_LONG).show();
+                                  progressDialog.dismiss();
+                              }
+                          }
+                      })
                   }
 
-
-
-                          }
-
-
-
-
-
-  }
->>>>>>> origin/master
