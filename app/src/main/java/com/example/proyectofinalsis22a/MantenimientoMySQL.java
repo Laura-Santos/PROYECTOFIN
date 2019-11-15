@@ -201,6 +201,12 @@ Dto datos = new Dto();
              new Response.Listener<String>() {
                  @RequiresApi(api = Build.VERSION_CODES.M)
                  @SuppressLint("ResourceType")
+                 @Override
+                 public void onResponse(String response) {
+                     if(response.equals("0")) {
+                         Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
+                         progressDialog.dismiss();
+                     }else{
 
 
   }
