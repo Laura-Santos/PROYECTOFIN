@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">ProyectoFinalSIS22A</string>
+    <string name="app_name">Proyecto</string>
+    <string name="title_activity_main2">App Final</string>
+
+    <string name="action_limpiar">Limpiar </string>
+    <string name="listarticulos">Lista de Contenido</string>
+    <string name="listarticulos1">Lista ListView</string>
+
+
+    <string name="salir">Salir</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="usuario"><u>Registrarme ahora</u></string>
+    <string name="pass"><u>¿Se te olvidó tu contraseña?</u></string>
+    <string name="register"><u><b><i>Copyright</i></b></u></string>
+
+
 </resources>

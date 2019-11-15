@@ -33,9 +33,6 @@ public class busqueda {
     AlertDialog.Builder dialogo1;
     AlertDialog.Builder dialogo;
     ProgressDialog progressDialog;
-
-    //List<Productos> productosList;
-    //List<> productosList;
     ProductsAdapter adapter;
 
 
@@ -60,11 +57,7 @@ public class busqueda {
                             progressDialog.dismiss();
                         }else{
                             try {
-                                /*
-                                Toast toast = Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
-                                */
+
                                 JSONArray jsonArray = new JSONArray(response);
 
                                 String nombre = jsonArray.getJSONObject(0).getString("autor");
@@ -77,7 +70,6 @@ public class busqueda {
 
                                 intent.putExtra("autor", nombre);
 
-                                //intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                 context.startActivity(intent);
 
                                 progressDialog.dismiss();
