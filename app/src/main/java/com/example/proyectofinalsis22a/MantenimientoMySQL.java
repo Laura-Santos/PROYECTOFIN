@@ -222,17 +222,16 @@ Dto datos = new Dto();
 
                                       }else{
                                           try {
-                                /*
-                                Toast toast = Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
-                                */
+
                                               JSONArray jsonArray = new JSONArray(response);
                                               String codigo = jsonArray.getJSONObject(0).getString("codigo");
                                               String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
                                               String autor = jsonArray.getJSONObject(0).getString("autor");
                                               String tipo = jsonArray.getJSONObject(0).getString("tipo");
 
-
+                                              datos.setCodigo(Integer.parseInt(codigo));
+                                              datos.setDescripcion(descripcion);
+                                              datos.setAutor(autor);
+                                              datos.setTipo(tipo);
 
 
