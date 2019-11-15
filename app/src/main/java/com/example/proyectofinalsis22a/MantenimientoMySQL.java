@@ -207,6 +207,16 @@ Dto datos = new Dto();
                          Toast.makeText(context, "No se encontrarón resultados para la búsqueda especificada.", Toast.LENGTH_SHORT).show();
                          progressDialog.dismiss();
                      }else{
+                         try {
+
+                             JSONArray jsonArray = new JSONArray(response);
+                             String codigo = jsonArray.getJSONObject(0).getString("codigo");
+                             String descripcion = jsonArray.getJSONObject(0).getString("descripcion");
+                             String autor = jsonArray.getJSONObject(0).getString("autor");
+                             String tipo = jsonArray.getJSONObject(0).getString("tipo");
+
+
+ }
 
 
   }
