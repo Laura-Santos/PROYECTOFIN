@@ -20,6 +20,10 @@ public class MySingleton {
     private ImageLoader mImageLoader;
     private static Context mCtx;
 
+    private MySingleton(Context context) {
 
+
+        }
+}
 }
 
