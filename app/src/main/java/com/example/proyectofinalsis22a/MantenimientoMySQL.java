@@ -185,6 +185,15 @@ Dto datos = new Dto();
                                   progressDialog.dismiss();
                               }
                           }
-                      })
+                      }){
+                          protected Map<String, String> getParams() throws AuthFailureError {
+                              Map<String, String> map = new HashMap<String, String>();
+                              map.put("codigo",codigo);
+                              return map;
+                          }
+                      };
+
+                      MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+
                   }
 
