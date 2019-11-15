@@ -241,4 +241,9 @@ Dto datos = new Dto();
                                               intent.putExtra("autor", autor);
                                               intent.putExtra("tipo", tipo);
 
+                                              context.startActivity(intent);
+
+                                              progressDialog.dismiss();
+
+
 
