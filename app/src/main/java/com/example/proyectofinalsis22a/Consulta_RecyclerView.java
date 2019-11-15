@@ -63,10 +63,10 @@ public class Consulta_RecyclerView {
 
         Toolbar toolbar = findViewById(R.id.toolbar1);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back));
-        toolbar.setTitleTextColor(getResources().getColor(R.color.mycolore));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.color1));
         toolbar.setTitleMargin(0, 0, 0, 0);
         toolbar.setSubtitle("Consulta de Himnarios");
-        toolbar.setSubtitleTextColor(getResources().getColor(R.color.mycolor1));
+        toolbar.setSubtitleTextColor(getResources().getColor(R.color.color2));
         toolbar.setTitle("...");
         setSupportActionBar(toolbar);
 
