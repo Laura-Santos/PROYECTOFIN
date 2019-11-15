@@ -268,6 +268,9 @@ Dto datos = new Dto();
                           return map;
                       }
                   };
+                      MySingleton.getInstance(context).addToRequestQueue(stringRequest);
+                  }
+
 
 
 
