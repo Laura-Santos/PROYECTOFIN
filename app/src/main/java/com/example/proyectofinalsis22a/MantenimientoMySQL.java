@@ -191,6 +191,10 @@ Dto datos = new Dto();
  public void consultarDescripcion(final Context context, final String descripcion){
 
      progressDialog = new ProgressDialog(context);
+     progressDialog.setCancelable(false);
+     progressDialog.setMessage("Espere por favor, Estamos trabajando en su petición en el servidor");
+     progressDialog.show();
+
 
   }
 
