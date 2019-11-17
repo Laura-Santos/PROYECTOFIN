@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo3"
+    tools:context=".SplashScreen">
+
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="80dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/logo"
+        />
+
+    <TextView
+        android:layout_width="421dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Docente:"
+        android:textAlignment="center"
+        android:textColor="#DA2F2F"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:layout_width="421dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Manuel de Jesús Gámez López"
+        android:textAlignment="center"
+        android:textColor="#0A0808"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="421dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Módulo:"
+        android:textAlignment="center"
+        android:textColor="#DA2F2F"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="470dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Desarrollo de Aplicaciones Utilzando Tecnologías Emergentes"
+        android:textColor="#0A0808"
+        android:layout_marginBottom="15dp"
+        android:textSize="14sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="474dp"
+        app:srcCompat="@drawable/" />
+
+
+</LinearLayout>
