@@ -7,35 +7,48 @@ import java.io.Serializable;
 public class Dto implements Serializable {
 
     int codigo;
-    String descripcion;
     String autor;
-    String tipo;
 
-    public int getCodigo() { return codigo; }
-
-    public void setCodigo(int codigo) { this.codigo = codigo; }
-
-    public String getDescripcion() { return descripcion; }
-
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
-
-    public String getAutor() { return autor; }
-
-    public void setAutor(String autor) { this.autor = autor; }
-
-    public String getTipo() { return tipo; }
-
-    public void setTipo(String tipo) { this.tipo = tipo; }
-
-    public Dto() {
-
+    public String getDescripcion() {
+        return Descripcion;
     }
 
-  //constructor
-  public Dto(int codigo, String descripcion, String autor, String tipo) {
-      this.codigo = codigo;
-      this.descripcion = descripcion;
-      this.autor = autor;
-      this.tipo = tipo;
-  }
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
+    }
+
+    String Descripcion;
+    String nombre;
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+
+    public Dto() {
+        this.codigo=codigo;
+        this.autor = autor;
+        String descripcion;
+        this.nombre = nombre;
+}
 }
