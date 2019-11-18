@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     String codigo = "";
     String descripcion = "";
     String autor = "";
-    String tipo = "";
+    String tipo = "";//
 
     MantenimientoMySQL manto = new MantenimientoMySQL();
     Dto datos = new Dto();
