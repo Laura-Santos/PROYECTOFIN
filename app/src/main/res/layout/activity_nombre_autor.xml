@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/fondo3"
-    tools:context=".NumeroHimno">
-
+    tools:context=".NombreAutor">
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-black"
         android:text="Himnario"
         android:textAlignment="center"
@@ -25,26 +24,26 @@
         android:layout_height="125dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:src="@drawable/articulo" />
+        android:src="@drawable/cantar" />
 
     <EditText
-        android:id="@+id/et_codigo"
+        android:id="@+id/et_autor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="70dp"
         android:layout_marginRight="12dp"
         android:background="@drawable/estiloedittext"
-        android:drawableStart="@drawable/ic_busc_cod"
+        android:drawableStart="@drawable/ic_person"
         android:drawablePadding="5dp"
         android:fontFamily="sans-serif-black"
-        android:hint="Ingrese el numero a buscar"
+        android:hint="Ingrese el nombre de autor a buscar"
         android:inputType="textPersonName"
         android:paddingLeft="25dp" />
 
 
     <Button
-        android:id="@+id/btn_consultaNumero"
+        android:id="@+id/btn_consultaporNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -60,4 +59,5 @@
         android:shadowRadius="8"
         android:text="Consultar"
         android:textColor="#0A0A0A" />
+
 </LinearLayout>
