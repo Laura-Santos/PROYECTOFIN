@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
-    tools:context="com.eg.himnario.NumeroHimno">
+    android:background="@drawable/fondo3"
+    tools:context=".NumeroHimno">
 
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-black"
         android:text="Himnario"
         android:textAlignment="center"
