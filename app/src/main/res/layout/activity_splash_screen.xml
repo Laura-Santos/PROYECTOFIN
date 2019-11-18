@@ -65,11 +65,59 @@
         android:textSize="14sp" />
 
 
+
+    <TextView
+        android:layout_width="421dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Integrantes:"
+        android:textAlignment="center"
+        android:textColor="#DA2F2F"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="470dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="110dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ada Luz Alvarenga Belloso"
+        android:textColor="#0A0808"
+        android:layout_marginBottom="15dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="470dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Blanca Estela Hernández López"
+        android:textColor="#0A0808"
+        android:layout_marginBottom="15dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="470dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="110dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Laura Lorena Santos García"
+        android:textColor="#0A0808"
+        android:layout_marginBottom="55dp"
+        android:textSize="14sp" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="474dp"
-        app:srcCompat="@drawable/" />
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/ic_and" />
 
 
 </LinearLayout>
