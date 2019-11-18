@@ -160,7 +160,12 @@ public class MainActivity extends AppCompatActivity {
                     input3 = false;
                 }else {
                     input3=true;
-
+                }
+                if(et_genero.getText().toString().length()==0){
+                    et_genero.setError("Campo obligatorio");
+                    input2 = false;
+                }else {
+                    input2=true;
                 }
 
                 if (inputEt && inputEd && input1 && input2&& input3){
@@ -169,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
                     String autor = et_autor.getText().toString();
                     String nombre = et_nombre.getText().toString();
                     String genero = et_genero.getText().toString();
-                    manto.guardar(MainActivity.this, codigo, letra, autor,nombre);
+                    manto.guardar(MainActivity.this, codigo, descripcion, autor,nombre,nombre);
 
                     limpiarDatos();
                     et_codigo.requestFocus();
