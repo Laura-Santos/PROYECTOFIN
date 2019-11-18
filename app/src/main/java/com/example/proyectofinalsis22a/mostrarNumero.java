@@ -13,7 +13,7 @@ private TextView tvtitulo,tvletra,tvnumero;
     String senal = "";
     String codigo = "";
 
-
+//
     MantenimientoMySQL manto = new MantenimientoMySQL();
     Dto datos = new Dto();
 
